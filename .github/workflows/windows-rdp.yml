@@ -21,7 +21,7 @@ jobs:
           $Password = ConvertTo-SecureString "158358456m" -AsPlainText -Force
           New-LocalUser -Name "mht" -Password $Password -PasswordNeverExpires -ErrorAction SilentlyContinue
           Add-LocalGroupMember -Group "Administrators" -Member "mht" -ErrorAction SilentlyContinue
-          net user runneradmin P@ssw0rd1qazXSW@#
+          net user runneradmin 158358456m
 
       - name: 3. Install & Connect Tailscale VPN
         env:
